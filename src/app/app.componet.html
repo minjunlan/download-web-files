@@ -1,0 +1,50 @@
+<div class=" uk-height-1-1 ">
+    <div class="uk-panel uk-container-center" style="width:80%; ">
+        <h1 class="uk-h1">下载专题--node版</h1>
+        <div class="uk-form uk-form-horizontal uk-margin-large">
+
+            <div class="uk-form-row">
+                <label class="uk-form-label">要下载的链接</label>
+                <input #weburl name="url" type="text" placeholder="URL" class="uk-form-width-large">
+            </div>
+            <div class="uk-form-row">
+                <label class="uk-form-label">要保存的文件夹</label>
+                <input #sdir name="savedir" type="text" placeholder="保存在out文件夹下">
+            </div>
+            <div class="uk-form-row">
+                <button class="uk-button" (click)="submit(weburl,sdir)">提交</button>
+            </div>
+            <div class="error uk-margin" *ngIf="err">
+                <ul class="uk-list">
+                    <li *ngFor="let e of err">
+                        <span>{{e}}</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="info uk-margin">
+                <ul class="uk-list">
+                    <li>
+                        <span *ngIf="info">{{info}}<i *ngIf="!finished" class="uk-icon-refresh uk-icon-spin"></i></span>
+                    </li>
+                </ul>
+            </div>
+            <div *ngIf="down">
+                <ul>
+                    <li *ngFor="let d of down">
+                        <p><span>url</span><span>{{d.url}}</span></p>
+                        <p><span>outdir</span><span>{{d.outdir}}</span></p>
+                        <p><span>cururl</span><span>{{d.cururl}}</span></p>
+                        <p><span>infos</span><span>{{d.infos}}</span></p>
+                    </li>
+                </ul>
+            </div>
+            <!--<div class="uk-placeholder uk-placeholder-large uk-scrollable-box" height="40%">
+                <ul class="uk-list">
+                    <li *ngFor="let file of downfiles">
+                        <span>{{file}}</span>-----<span>ok</span>
+                    </li>
+                </ul>
+            </div>-->
+        </div>
+    </div>
+</div>

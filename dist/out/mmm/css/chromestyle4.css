@@ -1,0 +1,98 @@
+.chromestyle{
+width: 100%;
+height:31px;
+font-size:14px;
+font-family:宋体;
+}
+
+.chromestyle:after{ /*Add margin between menu and rest of content in Firefox*/
+content: "."; 
+display: block; 
+height: 0; 
+clear: both; 
+visibility: hidden;
+font-size:14px;
+font-family:宋体;
+}
+
+.chromestyle ul{
+ 
+width: 100%;
+background: url(../images/dh.jpg) center center repeat-x; /*THEME CHANGE HERE*/
+padding: 9px 0;
+margin: 0;
+font-size:14px;
+font-family:宋体;
+text-align: center; /*set value to "left", "center", or "right"*/
+}
+
+.chromestyle ul li{
+float:left;
+display: inline;
+font-size:14px;
+font-family:宋体;
+}
+
+.chromestyle ul li a{
+display:block;
+color: #ffffff;
+width: 89px;
+ 
+	text-align: center;
+	white-space: nowrap;
+	overflow:hidden;
+margin: 0;
+font-size:14px;
+ 
+text-decoration: none;
+ 
+}
+
+.chromestyle ul li a:hover{
+color: #ff3232;
+ 
+font-size:14px;
+font-family:宋体;
+}
+
+.chromestyle ul li a[rel]:after{ /*HTML to indicate drop down link*/
+content: "";
+font-size:14px;
+font-family:宋体;
+/*content: " " url(downimage.gif); /*uncomment this line to use an image instead*/
+}
+
+
+/* ######### Style for Drop Down Menu ######### */
+
+.dropmenudiv{
+position:absolute;
+top: 0;
+border-bottom-width: 0;
+line-height:18px;
+font-size:14px;
+font-family:宋体;
+z-index:100;
+background-color: white;
+width: 200px;
+visibility: hidden;
+filter: progid:DXImageTransform.Microsoft.Shadow(color=#CACACA,direction=135,strength=4); /*Add Shadow in IE. Remove if desired*/
+}
+
+
+.dropmenudiv a{
+width: 100%;
+display: block;
+text-indent: 3px;
+font-size:14px;
+font-family:宋体;
+padding: 7px 0;
+text-decoration: none;
+color: #ffffff;
+}
+
+.dropmenudiv a:hover{ /*THEME CHANGE HERE*/
+background-color: #e20437;
+font-size:14px;
+font-family:宋体;
+}
